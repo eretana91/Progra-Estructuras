@@ -368,7 +368,7 @@ public class Games extends javax.swing.JFrame {
         Dimension height = getSize();
         //Se selecciona la imagen que tenemos en el paquete Juegosc//ruta del programa
         
-        ImageIcon Img = new ImageIcon(getClass().getResource("/Games/"+game+".jpg"));
+        ImageIcon Img = new ImageIcon(getClass().getResource("/Pictures/Games/"+game+".jpg"));
         //se dibuja la imagen que tenemos en el paquete juegos //dentro de un panel
         
         grafico.drawImage(Img.getImage(),0,0,height.width,height.height,null);
