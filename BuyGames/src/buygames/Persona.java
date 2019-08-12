@@ -6,9 +6,9 @@ package buygames;
  *
  *
  */
-public class Cliente {
+public class Persona {
 
-    //Variables para Cliente
+    //Variables para Persona
     private static int clientes[][];
 
     public static int[][] getUsers() {
@@ -31,7 +31,7 @@ public class Cliente {
     private String phone;
     private String email;
 
-    public Cliente(String fullName, String address, String phone, String email) {
+    public Persona(String fullName, String address, String phone, String email) {
         this.fullName = fullName;
         this.address = address;
         this.phone = phone;
