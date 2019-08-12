@@ -59,9 +59,9 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/logo.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/logo.jpg"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/samus.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/samus.png"))); // NOI18N
         jLabel4.setMaximumSize(new java.awt.Dimension(1553, 1500));
         jLabel4.setMinimumSize(new java.awt.Dimension(1553, 1500));
         jLabel4.setPreferredSize(new java.awt.Dimension(1553, 1500));

@@ -27,9 +27,9 @@ public class Welcome extends javax.swing.JFrame {
         setTitle("Home");
         setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Crash.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/Crash.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/logo.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/logo.jpg"))); // NOI18N
 
         RegisterButton.setText("Register Client");
         RegisterButton.addActionListener(new java.awt.event.ActionListener() {
@@ -45,11 +45,11 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/gamer.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/gamer.png"))); // NOI18N
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/gamestore.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/gamestore.png"))); // NOI18N
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/SignOut.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/SignOut.png"))); // NOI18N
         jButton4.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
