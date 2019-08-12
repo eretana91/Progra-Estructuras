@@ -26,41 +26,52 @@ public class Persona {
     public static void setClientes(int[][] aClientes) {
         clientes = aClientes;
     }
-    private String fullName;
-    private String address;
-    private String phone;
+    private String nombre;
+    private String apellido;
+    private String direccion;
+    private String telefono;
     private String email;
+    private String cedula;
 
-    public Persona(String fullName, String address, String phone, String email) {
-        this.fullName = fullName;
-        this.address = address;
-        this.phone = phone;
+    public Persona(String nombre, String apellido, String direccion, String telefono, String email, String cedula) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
         this.email = email;
+        this.cedula = cedula;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-
-    public String getAddress() {
-        return address;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDirecion(String direcion) {
+        this.direccion = direcion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getEmail() {
@@ -71,11 +82,22 @@ public class Persona {
         this.email = email;
     }
 
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+    
+   
+
     @Override
     public String toString() {
-        return "FullName= " + fullName
-                + "\nAddress= " + address
-                + "\nPhone= " + phone
-                + "\nEmail= " + email;
+        return "Nombre= " + nombre
+                + "\nApellido: " + apellido
+                + "\nDirecion: " + direccion
+                + "\nTelefono: " + telefono
+                + "\nEmail: " + email;
     }
 }
