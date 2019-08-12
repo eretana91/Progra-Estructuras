@@ -20,8 +20,8 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        username = new javax.swing.JTextField();
-        password = new javax.swing.JPasswordField();
+        JTextUsername = new javax.swing.JTextField();
+        JTextPassword = new javax.swing.JPasswordField();
         EnterButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -35,20 +35,20 @@ public class VentanaLogin extends javax.swing.JFrame {
 
         jLabel2.setText("password:");
 
-        username.addActionListener(new java.awt.event.ActionListener() {
+        JTextUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameActionPerformed(evt);
+                JTextUsernameActionPerformed(evt);
             }
         });
 
-        password.addActionListener(new java.awt.event.ActionListener() {
+        JTextPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
+                JTextPasswordActionPerformed(evt);
             }
         });
-        password.addKeyListener(new java.awt.event.KeyAdapter() {
+        JTextPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                passwordKeyTyped(evt);
+                JTextPasswordKeyTyped(evt);
             }
         });
 
@@ -88,8 +88,8 @@ public class VentanaLogin extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(EnterButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(password)
-                            .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(JTextPassword)
+                            .addComponent(JTextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -108,11 +108,11 @@ public class VentanaLogin extends javax.swing.JFrame {
                         .addGap(150, 150, 150)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTextUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
-                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTextPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addComponent(EnterButton))
                     .addGroup(layout.createSequentialGroup()
@@ -126,20 +126,20 @@ public class VentanaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+    private void JTextUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextUsernameActionPerformed
 
-    }//GEN-LAST:event_usernameActionPerformed
+    }//GEN-LAST:event_JTextUsernameActionPerformed
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+    private void JTextPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextPasswordActionPerformed
 
-    }//GEN-LAST:event_passwordActionPerformed
+    }//GEN-LAST:event_JTextPasswordActionPerformed
 
     private void EnterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterButtonActionPerformed
-        Persona r = new Persona( "", "", "", "");
+        Persona r = new Persona( "", "", "", "","","");
         VentanaPrincipal welcome = new VentanaPrincipal();
-        String user = username.getText(); //se almacena en un String el "username" digitado por el usuario
+        String user = JTextUsername.getText(); //se almacena en un String el "username" digitado por el usuario
         char getpass[];
-        getpass = password.getPassword(); //Se almacena en un arreglo tipo Char el "password" digitado por el usuario
+        getpass = JTextPassword.getPassword(); //Se almacena en un arreglo tipo Char el "password" digitado por el usuario
         String pass = String.valueOf(getpass); //se almacena en un String el "password" digitado por el usuario
         if (user.equals(userAdmin)) {
             if (pass.equals(passAdmin)) {
@@ -150,13 +150,13 @@ public class VentanaLogin extends javax.swing.JFrame {
                 frame.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
-                password.setText("");
-                username.setText("");
+                JTextPassword.setText("");
+                JTextUsername.setText("");
             }
         } else {
             JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
-            password.setText("");
-            username.setText("");
+            JTextPassword.setText("");
+            JTextUsername.setText("");
         }
     }//GEN-LAST:event_EnterButtonActionPerformed
 
@@ -164,11 +164,11 @@ public class VentanaLogin extends javax.swing.JFrame {
         System.exit(0);//Salir del programa
     }//GEN-LAST:event_ExitButtonActionPerformed
 
-    private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-        if (password.getText().length() == 20) {
+    private void JTextPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextPasswordKeyTyped
+        if (JTextPassword.getText().length() == 20) {
             evt.consume();
         }
-    }//GEN-LAST:event_passwordKeyTyped
+    }//GEN-LAST:event_JTextPasswordKeyTyped
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -205,12 +205,12 @@ public class VentanaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton EnterButton;
     private javax.swing.JButton ExitButton;
+    private javax.swing.JPasswordField JTextPassword;
+    private javax.swing.JTextField JTextUsername;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
     //Variable con datos de usuario admin
     private String passAdmin = "password";
