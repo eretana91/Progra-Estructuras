@@ -318,7 +318,7 @@ public class VentanaFormulario extends javax.swing.JFrame {
     //Variables de Vector para almacenar los Clientes
     int arrPos = 0; //Contador de Posicion en vector
     int x = 50; //Tamaño de Clientes para Vector
-    Cliente c[] = new Cliente[x];
+    Persona c[] = new Persona[x];
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
        if(FullName.getText().length()<5){
        JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre completo valido");
@@ -343,7 +343,7 @@ public class VentanaFormulario extends javax.swing.JFrame {
        String email = Email.getText();
        
        
-       Cliente cliente = new Cliente (fullname,address,phone,email);
+       Persona cliente = new Persona (fullname,address,phone,email);
        
        //Se almacenan los Datos de los clientes en orden de 1 - 50 en el vector
         if(arrPos<x){

@@ -135,7 +135,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void EnterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterButtonActionPerformed
-        Cliente r = new Cliente( "", "", "", "");
+        Persona r = new Persona( "", "", "", "");
         VentanaPrincipal welcome = new VentanaPrincipal();
         String user = username.getText(); //se almacena en un String el "username" digitado por el usuario
         char getpass[];
