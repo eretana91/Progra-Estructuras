@@ -1,5 +1,4 @@
 package buygames;
-
 /**
  *
  * @author Erick Retana Sánchez
