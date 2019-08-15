@@ -9,22 +9,22 @@ package buygames;
 public class Persona {
 
     //Variables para Persona
-    private static int clientes[][];
+    private static int personas[][];
 
     public static int[][] getUsers() {
-        return clientes;
+        return personas;
     }
 
     public static void setUsers(int[][] aClientes) {
-        clientes = aClientes;
+        personas = aClientes;
     }
 
     public static int[][] getClientes() {
-        return clientes;
+        return personas;
     }
 
     public static void setClientes(int[][] aClientes) {
-        clientes = aClientes;
+        personas = aClientes;
     }
     private String nombre;
     private String apellido;
