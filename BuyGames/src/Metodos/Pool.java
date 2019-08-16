@@ -24,7 +24,7 @@ public class Pool {
 
         BasicDataSource basicDataSource = new BasicDataSource();
 
-        basicDataSource.setDriverClassName("org.gjt.mm.mysql.Driver");
+        basicDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         basicDataSource.setUsername(user);
         basicDataSource.setPassword(pass);
         basicDataSource.setUrl(url);

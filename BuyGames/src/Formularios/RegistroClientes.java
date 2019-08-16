@@ -1,6 +1,6 @@
 package Formularios;
 import Objectos.Persona;
-import Metodos.VentanaPrincipal;
+import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
 /**
  *
@@ -347,7 +347,7 @@ public class RegistroClientes extends javax.swing.JFrame {
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
             dispose();
-            VentanaPrincipal frame = new VentanaPrincipal();
+            MenuPrincipal frame = new MenuPrincipal();
             frame.setSize(800,650);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);

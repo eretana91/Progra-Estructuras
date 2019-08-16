@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
  * @author Erick Retana Sánchez
  * 
  **/
-public class VentanaCarrito extends javax.swing.JFrame {
+public class CarritoCompras extends javax.swing.JFrame {
 
-    public VentanaCarrito() {
+    public CarritoCompras() {
         initComponents();
     }
 
@@ -220,7 +220,7 @@ public class VentanaCarrito extends javax.swing.JFrame {
 
     private void PrevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrevButtonActionPerformed
         if (game != 0){
-        VentanaCarrito.CatalogoDeJuegos games = new VentanaCarrito.CatalogoDeJuegos();
+        CarritoCompras.CatalogoDeJuegos games = new CarritoCompras.CatalogoDeJuegos();
         GamePanel.add(games);
         GamePanel.repaint();
         }
@@ -232,7 +232,7 @@ public class VentanaCarrito extends javax.swing.JFrame {
     }//GEN-LAST:event_PrevButtonActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-        VentanaCarrito.CatalogoDeJuegos games = new VentanaCarrito.CatalogoDeJuegos();
+        CarritoCompras.CatalogoDeJuegos games = new CarritoCompras.CatalogoDeJuegos();
         GamePanel.add(games);
         GamePanel.repaint();
             if (game!=cantGames){
@@ -254,7 +254,7 @@ public class VentanaCarrito extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
-        VentanaPrincipal frame = new VentanaPrincipal();
+        MenuPrincipal frame = new MenuPrincipal();
         frame.setSize(800,650);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -342,14 +342,18 @@ public class VentanaCarrito extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaCarrito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarritoCompras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaCarrito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarritoCompras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaCarrito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarritoCompras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaCarrito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarritoCompras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -358,7 +362,7 @@ public class VentanaCarrito extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaCarrito().setVisible(true);
+                new CarritoCompras().setVisible(true);
             }
         });
     }

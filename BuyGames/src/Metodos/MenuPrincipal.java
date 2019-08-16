@@ -1,6 +1,6 @@
 package Metodos;
 
-import Metodos.VentanaCarrito;
+import Metodos.CarritoCompras;
 import Formularios.Login;
 import Formularios.RegistroClientes;
 
@@ -9,9 +9,9 @@ import Formularios.RegistroClientes;
  * @author Erick Retana Sánchez
  * 
  **/
-public class VentanaPrincipal extends javax.swing.JFrame {
+public class MenuPrincipal extends javax.swing.JFrame {
 
-    public VentanaPrincipal() {
+    public MenuPrincipal() {
         initComponents();
     }
 
@@ -139,7 +139,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void GamesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GamesButtonActionPerformed
             //Codigo para ir a ventana de Catalogo de Juegos
             dispose();
-            VentanaCarrito frame = new VentanaCarrito();
+            CarritoCompras frame = new CarritoCompras();
             frame.setSize(800,650);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
@@ -159,21 +159,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaPrincipal().setVisible(true);
+                new MenuPrincipal().setVisible(true);
             }
         });
     }
