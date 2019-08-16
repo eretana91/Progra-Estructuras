@@ -11,20 +11,17 @@ import javax.swing.JOptionPane;
  *
  * @author erick.retana
  */
-public class MetodosLogin {
+public class Autenticacion {
 
-    PoolMySQL metodospool = new PoolMySQL();
+    DataBase metodospool = new DataBase();
     
     public int validarIngreso(){
         String usuario = Login.JTextUsername.getText();
         String clave = String.valueOf(Login.JTextPassword.getPassword());
-        System.out.println(usuario);
-        System.out.println(clave);
         
         int resultado = 0;
         
         String SSQL = "SELECT * FROM usuarios WHERE usuario= '"+usuario+"' AND clave='"+clave+"'"; 
-        System.out.println(SSQL);
         Connection conect = null;
         
         try {
