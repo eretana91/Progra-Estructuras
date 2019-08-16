@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class MetodosLogin {
 
-    Pool metodospool = new Pool();
+    PoolMySQL metodospool = new PoolMySQL();
     
     public int validarIngreso(){
         String usuario = Login.JTextUsername.getText();

@@ -1,7 +1,7 @@
 package Formularios;
 
 import Metodos.MetodosLogin;
-import Metodos.Pool;
+import Metodos.PoolMySQL;
 import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
@@ -183,7 +183,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextPasswordKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Pool metodospool = new Pool();
+        PoolMySQL metodospool = new PoolMySQL();
         java.sql.Connection cn = null;
 
         try {

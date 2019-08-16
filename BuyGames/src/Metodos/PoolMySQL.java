@@ -5,7 +5,7 @@ import org.apache.commons.dbcp.BasicDataSource;
  *
  * @author erick.retana
  */
-public class Pool {
+public class PoolMySQL {
 
     public DataSource dataSource;
 
@@ -14,7 +14,7 @@ public class Pool {
     public String user = "dbconect";
     public String pass = "Temporal123456789";
 
-    public Pool() {
+    public PoolMySQL() {
 
         inicializaDataSource();
 
