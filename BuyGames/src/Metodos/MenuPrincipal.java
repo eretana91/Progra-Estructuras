@@ -7,14 +7,14 @@ import Formularios.RegistroClientes;
 /**
  *
  * @author Erick Retana Sánchez
- * 
- **/
+ *
+ *
+ */
 public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -121,28 +121,32 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            dispose();
-            Login frame = new Login();
-            frame.setSize(800,650);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        dispose();
+        Login frame = new Login();
+        frame.setSize(800, 650);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-            dispose();
-            RegistroClientes frame = new RegistroClientes();
-            frame.setSize(800,650);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        if (countBoton1 == 0) {
+            RegistroClientes frame1 = new RegistroClientes();
+            frame1.setSize(450, 400);
+            frame1.setLocationRelativeTo(null);
+            frame1.setVisible(true);
+            countBoton1++;
+        } else {
+        }
+
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
     private void GamesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GamesButtonActionPerformed
-            //Codigo para ir a ventana de Catalogo de Juegos
-            dispose();
-            CarritoCompras frame = new CarritoCompras();
-            frame.setSize(800,650);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        //Codigo para ir a ventana de Catalogo de Juegos
+        dispose();
+        CarritoCompras frame = new CarritoCompras();
+        frame.setSize(800, 650);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_GamesButtonActionPerformed
 
     public static void main(String args[]) {
@@ -189,4 +193,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+int countBoton1 = 0;
 }
