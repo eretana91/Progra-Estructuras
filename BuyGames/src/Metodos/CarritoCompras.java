@@ -264,7 +264,7 @@ public class CarritoCompras extends javax.swing.JFrame {
     double monDis;
     double subTotal;
     double total;
-    Cart c = new Cart(0,0,0);
+    Cart c = new Cart(0,0,0); 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(game==0){
         return;    
@@ -363,8 +363,8 @@ public class CarritoCompras extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CarritoCompras().setVisible(true);
-            }
-        });
+            }  
+        });      
     }
     public class CatalogoDeJuegos extends javax.swing.JPanel{
     

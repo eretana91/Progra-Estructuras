@@ -1,11 +1,11 @@
 package Listas;
 
-import Objectos.Cliente;
+import Objectos.VideoJuegos;
 
 public class Nodo {
 
     // Variable en la cual se va a guardar el valor.
-    private Cliente valor;
+    private VideoJuegos valor;
 
     // Variable para enlazar los nodos. Puntero.
     private Nodo siguiente;
@@ -18,11 +18,11 @@ public class Nodo {
     }
 
     // Métodos get y set para los atributos.
-    public Cliente getValor() {
+    public VideoJuegos getValor() {
         return valor;
     }
 
-    public void setValor(Cliente valor) {
+    public void setValor(VideoJuegos valor) {
         this.valor = valor;
     }
 

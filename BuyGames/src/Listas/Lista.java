@@ -1,6 +1,6 @@
 package Listas;
 
-import Objectos.Cliente;
+import Objectos.VideoJuegos;
 
 public class Lista {
 
@@ -10,6 +10,7 @@ public class Lista {
 
     public void Lista() {
         inicio = null;
+        fin = null;
         tamanio = 0;
     }
 
@@ -21,7 +22,7 @@ public class Lista {
         return tamanio;
     }
 
-    public void agregarAlFinal(Cliente valor) {
+    public void agregarAlFinal(VideoJuegos valor) {
 
         Nodo nuevo = new Nodo();
         nuevo.setValor(valor);
@@ -39,7 +40,7 @@ public class Lista {
         tamanio++;
     }
 
-    public void agregarAlInicio(Cliente valor) {
+    public void agregarAlInicio(VideoJuegos valor) {
         Nodo nuevo = new Nodo();
         nuevo.setValor(valor);
         if (esVacia()) {
