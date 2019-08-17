@@ -5,11 +5,12 @@
     <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="Register Client"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Text Cursor"/>
+      <Color id="Default Cursor"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[450, 370]"/>
+      <Dimension value="[450, 400]"/>
     </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <AccessibilityProperties>
     <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Regitro de Clientes"/>
@@ -61,9 +62,9 @@
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="HomeButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="JButtonMenuPrincipal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="OutButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="JButtonSalir" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Component id="CleanButton" alignment="0" max="32767" attributes="0"/>
@@ -99,8 +100,8 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="HomeButton" min="-2" max="-2" attributes="0"/>
-                  <Component id="OutButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="JButtonMenuPrincipal" min="-2" max="-2" attributes="0"/>
+                  <Component id="JButtonSalir" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="JTextNombre" min="-2" max="-2" attributes="0"/>
@@ -109,11 +110,11 @@
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="CleanButton" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="RegisterButton" min="-2" pref="18" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
@@ -231,7 +232,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="OutButton">
+    <Component class="javax.swing.JButton" name="JButtonSalir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Pictures/Icons/SignOut.png"/>
@@ -241,7 +242,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OutButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButtonSalirActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="RegisterButton">
@@ -257,7 +258,7 @@
         <Property name="text" type="java.lang.String" value="Nuevo Cliente"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="HomeButton">
+    <Component class="javax.swing.JButton" name="JButtonMenuPrincipal">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Pictures/Icons/home.png"/>
@@ -267,7 +268,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HomeButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JButtonMenuPrincipalActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="CleanButton">

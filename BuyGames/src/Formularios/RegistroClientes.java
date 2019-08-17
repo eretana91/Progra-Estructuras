@@ -1,5 +1,5 @@
 package Formularios;
-import Objectos.Persona;
+import Objectos.Cliente;
 import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
 /**
@@ -27,10 +27,10 @@ public class RegistroClientes extends javax.swing.JFrame {
         JTextPhone = new javax.swing.JTextField();
         JTextCorreo = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        OutButton = new javax.swing.JButton();
+        JButtonSalir = new javax.swing.JButton();
         RegisterButton = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        HomeButton = new javax.swing.JButton();
+        JButtonMenuPrincipal = new javax.swing.JButton();
         CleanButton = new javax.swing.JButton();
         CheckName = new javax.swing.JLabel();
         CheckUsername = new javax.swing.JLabel();
@@ -46,8 +46,9 @@ public class RegistroClientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Register Client");
-        setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(450, 370));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(450, 400));
+        setResizable(false);
 
         jLabel3.setText("Nombre:");
 
@@ -108,11 +109,11 @@ public class RegistroClientes extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/gamer.png"))); // NOI18N
 
-        OutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/SignOut.png"))); // NOI18N
-        OutButton.setPreferredSize(new java.awt.Dimension(50, 50));
-        OutButton.addActionListener(new java.awt.event.ActionListener() {
+        JButtonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/SignOut.png"))); // NOI18N
+        JButtonSalir.setPreferredSize(new java.awt.Dimension(50, 50));
+        JButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OutButtonActionPerformed(evt);
+                JButtonSalirActionPerformed(evt);
             }
         });
 
@@ -125,11 +126,11 @@ public class RegistroClientes extends javax.swing.JFrame {
 
         jLabel11.setText("Nuevo Cliente");
 
-        HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/home.png"))); // NOI18N
-        HomeButton.setPreferredSize(new java.awt.Dimension(50, 50));
-        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+        JButtonMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/home.png"))); // NOI18N
+        JButtonMenuPrincipal.setPreferredSize(new java.awt.Dimension(50, 50));
+        JButtonMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeButtonActionPerformed(evt);
+                JButtonMenuPrincipalActionPerformed(evt);
             }
         });
 
@@ -235,9 +236,9 @@ public class RegistroClientes extends javax.swing.JFrame {
                         .addGap(45, 45, 45)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(OutButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(JButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(CleanButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -265,19 +266,19 @@ public class RegistroClientes extends javax.swing.JFrame {
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3))
-                    .addComponent(HomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OutButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(CleanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,21 +332,21 @@ public class RegistroClientes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
+    private void JButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonMenuPrincipalActionPerformed
             dispose();
             MenuPrincipal frame = new MenuPrincipal();
             frame.setSize(800,650);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-    }//GEN-LAST:event_HomeButtonActionPerformed
+    }//GEN-LAST:event_JButtonMenuPrincipalActionPerformed
 
-    private void OutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OutButtonActionPerformed
+    private void JButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonSalirActionPerformed
             dispose();
             Login frame = new Login();
             frame.setSize(800,650);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-    }//GEN-LAST:event_OutButtonActionPerformed
+    }//GEN-LAST:event_JButtonSalirActionPerformed
 
     private void CleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CleanButtonActionPerformed
         //Limpia todos los campos del formulario de registro
@@ -360,14 +361,19 @@ public class RegistroClientes extends javax.swing.JFrame {
         CheckPhone.setIcon(null);
         CheckEmail.setIcon(null);
     }//GEN-LAST:event_CleanButtonActionPerformed
-    //Variables de Vector para almacenar los Clientes
-    int arrPos = 0; //Contador de Posicion en vector
-    int x = 50; //Tamaño de Clientes para Vector
-    Persona c[] = new Persona[x];
+    
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-       if(JTextNombre.getText().length()<5){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre completo valido");
+       if(JTextNombre.getText().length()<1){
+       JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre valido");
        return;
+       }
+       if(JTextApellido.getText().length()<1){
+       JOptionPane.showMessageDialog(null, "Por favor ingrese un apellido valido");
+       return;
+       }
+       if(JTextCorreo.getText().contains("@")==false){
+           JOptionPane.showMessageDialog(null, "Por favor ingrese una cuenta de correo valida");
+           return;
        }
        if(JTextDireccion.getText().length()<5){
        JOptionPane.showMessageDialog(null, "Por favor ingrese una direccion valida");
@@ -377,26 +383,21 @@ public class RegistroClientes extends javax.swing.JFrame {
        JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de telefono valido");
        return;
        }
-       if(JTextCorreo.getText().contains("@")==false){
-           JOptionPane.showMessageDialog(null, "Por favor ingrese una cuenta de correo valida");
-           return;
-       } else {
+       if(JTextCedula.getText().length()<9){
+       JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de cedula valido");
+       return;
+       }else {
        }
+       Cliente nuevo = new Cliente ("","","","","","");
        String nombre = JTextNombre.getText();
        String apellido = JTextApellido.getText();
-       String direccion = JTextDireccion.getText();
-       String telefono = JTextPhone.getText();    
        String email = JTextCorreo.getText();
+       String direccion = JTextDireccion.getText();
        String cedula = JTextCedula.getText();
+       String telefono = JTextPhone.getText();    
+ 
        
-       
-       Persona cliente = new Persona (nombre,apellido,direccion,telefono,email,cedula);
-       
-       //Se almacenan los Datos de los clientes en orden de 1 - 50 en el vector
-        if(arrPos<x){
-        c[arrPos] = cliente;  
         JOptionPane.showMessageDialog(null, "Se registro correctamente el Cliente");
-        arrPos++;
         
         //Limpia todos los campos del formulario de registro
         JTextNombre.setText("");
@@ -407,7 +408,7 @@ public class RegistroClientes extends javax.swing.JFrame {
         CheckAddress.setIcon(null);
         CheckPhone.setIcon(null);
         CheckEmail.setIcon(null);
-        }
+        
              
     }//GEN-LAST:event_RegisterButtonActionPerformed
    
@@ -478,17 +479,7 @@ public class RegistroClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextCorreoFocusLost
    
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
-        for(int i=0;i<c.length;i++){                        
-            if (c[0] == null){
-            JOptionPane.showMessageDialog(null, "No existen Registros de Clientes");
-            return;
-            }
-            if (c[i] != null){
-                JOptionPane.showMessageDialog(null,"Cliente 00"+(i+1)+"\n"+ "Nombre: " + c[i].getNombre()+"\n"+"Email: " + c[i].getEmail()+"\n"+"Address: " + c[i].getDireccion());
-            }else{    
-                return;
-            }
-          }
+        
     }//GEN-LAST:event_ShowButtonActionPerformed
 
     private void JTextDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextDireccionKeyTyped
@@ -572,14 +563,14 @@ public class RegistroClientes extends javax.swing.JFrame {
     private javax.swing.JLabel CheckPhone;
     private javax.swing.JLabel CheckUsername;
     private javax.swing.JButton CleanButton;
-    private javax.swing.JButton HomeButton;
+    private javax.swing.JButton JButtonMenuPrincipal;
+    private javax.swing.JButton JButtonSalir;
     private javax.swing.JTextField JTextApellido;
     private javax.swing.JTextField JTextCedula;
     private javax.swing.JTextField JTextCorreo;
     private javax.swing.JTextField JTextDireccion;
     private javax.swing.JTextField JTextNombre;
     private javax.swing.JTextField JTextPhone;
-    private javax.swing.JButton OutButton;
     private javax.swing.JButton RegisterButton;
     private javax.swing.JButton ShowButton;
     private javax.swing.JLabel jLabel10;

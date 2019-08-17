@@ -157,7 +157,7 @@ public class Login extends javax.swing.JFrame {
         if (metodoslogin.validarIngreso() == 1) {
             dispose();
             MenuPrincipal frame = new MenuPrincipal();
-            frame.setSize(800, 650);
+            frame.setSize(650, 450);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
 
