@@ -1,15 +1,19 @@
 package Formularios;
+
 import Objectos.Cliente;
 import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Erick Retana Sánchez
- * 
- **/
+ *
+ *
+ */
 public class RegistroClientes extends javax.swing.JFrame {
-    
+
     javax.swing.ImageIcon check = new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/check.png"));
+
     public RegistroClientes() {
         initComponents();
     }
@@ -333,19 +337,19 @@ public class RegistroClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonMenuPrincipalActionPerformed
-            dispose();
-            MenuPrincipal frame = new MenuPrincipal();
-            frame.setSize(800,650);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        dispose();
+        MenuPrincipal frame = new MenuPrincipal();
+        frame.setSize(800, 650);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_JButtonMenuPrincipalActionPerformed
 
     private void JButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonSalirActionPerformed
-            dispose();
-            Login frame = new Login();
-            frame.setSize(800,650);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        dispose();
+        Login frame = new Login();
+        frame.setSize(800, 650);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_JButtonSalirActionPerformed
 
     private void CleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CleanButtonActionPerformed
@@ -361,44 +365,43 @@ public class RegistroClientes extends javax.swing.JFrame {
         CheckPhone.setIcon(null);
         CheckEmail.setIcon(null);
     }//GEN-LAST:event_CleanButtonActionPerformed
-    
+
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-       if(JTextNombre.getText().length()<1){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre valido");
-       return;
-       }
-       if(JTextApellido.getText().length()<1){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese un apellido valido");
-       return;
-       }
-       if(JTextCorreo.getText().contains("@")==false){
-           JOptionPane.showMessageDialog(null, "Por favor ingrese una cuenta de correo valida");
-           return;
-       }
-       if(JTextDireccion.getText().length()<5){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese una direccion valida");
-       return;
-       }
-       if(JTextPhone.getText().length()<8){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de telefono valido");
-       return;
-       }
-       if(JTextCedula.getText().length()<9){
-       JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de cedula valido");
-       return;
-       }else {
-       }
-       Cliente nuevo = new Cliente ("","","","","","");
-       String nombre = JTextNombre.getText();
-       String apellido = JTextApellido.getText();
-       String email = JTextCorreo.getText();
-       String direccion = JTextDireccion.getText();
-       String cedula = JTextCedula.getText();
-       String telefono = JTextPhone.getText();    
- 
-       
+        if (JTextNombre.getText().length() < 1) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre valido");
+            return;
+        }
+        if (JTextApellido.getText().length() < 1) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un apellido valido");
+            return;
+        }
+        if (JTextCorreo.getText().contains("@") == false) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese una cuenta de correo valida");
+            return;
+        }
+        if (JTextDireccion.getText().length() < 5) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese una direccion valida");
+            return;
+        }
+        if (JTextPhone.getText().length() < 8) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de telefono valido");
+            return;
+        }
+        if (JTextCedula.getText().length() < 9) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de cedula valido");
+            return;
+        } else {
+        }
+        Cliente nuevo = new Cliente("", "", "", "", "", "");
+        String nombre = JTextNombre.getText();
+        String apellido = JTextApellido.getText();
+        String email = JTextCorreo.getText();
+        String direccion = JTextDireccion.getText();
+        String cedula = JTextCedula.getText();
+        String telefono = JTextPhone.getText();
+
         JOptionPane.showMessageDialog(null, "Se registro correctamente el Cliente");
-        
+
         //Limpia todos los campos del formulario de registro
         JTextNombre.setText("");
         JTextDireccion.setText("");
@@ -408,91 +411,91 @@ public class RegistroClientes extends javax.swing.JFrame {
         CheckAddress.setIcon(null);
         CheckPhone.setIcon(null);
         CheckEmail.setIcon(null);
-        
-             
+
+
     }//GEN-LAST:event_RegisterButtonActionPerformed
-   
-    
+
+
     private void JTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTextNombreActionPerformed
 
     private void JTextNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextNombreKeyTyped
         //Codigo para limitar la cantidad de caracteres
-        if (JTextNombre.getText().length()==20){
-        evt.consume();    
+        if (JTextNombre.getText().length() == 20) {
+            evt.consume();
         }
         //Codigo para solo permitir letras en el campo Nombre Completo del Formulario
         char TipoDeTecla = evt.getKeyChar();
-        if (!Character.isWhitespace(TipoDeTecla) &&!Character.isLetter(TipoDeTecla)){
+        if (!Character.isWhitespace(TipoDeTecla) && !Character.isLetter(TipoDeTecla)) {
             evt.consume();
-        }else{
+        } else {
         }
     }//GEN-LAST:event_JTextNombreKeyTyped
 
     private void JTextPhoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextPhoneKeyTyped
         //Codigo para limitar la cantidad de caracteres
-        if (JTextPhone.getText().length()==8){
-        evt.consume(); 
+        if (JTextPhone.getText().length() == 8) {
+            evt.consume();
         }
         //Codigo para solo permitir numeros en el campo Telefono del Formulario
         char TipoDeTecla = evt.getKeyChar();
-        if (!Character.isDigit(TipoDeTecla)){
-        evt.consume();
+        if (!Character.isDigit(TipoDeTecla)) {
+            evt.consume();
         }
     }//GEN-LAST:event_JTextPhoneKeyTyped
 
     private void JTextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextNombreFocusLost
         // Codigo para poner Check si el campo esta lleno
-        if (JTextNombre.getText().length()>=5){
+        if (JTextNombre.getText().length() >= 5) {
             CheckName.setIcon(check);
-        }else{
+        } else {
             CheckName.setIcon(null);
         }
     }//GEN-LAST:event_JTextNombreFocusLost
 
     private void JTextDireccionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextDireccionFocusLost
         // Codigo para poner Check si el campo esta lleno
-        if (JTextDireccion.getText().length()>=5){
+        if (JTextDireccion.getText().length() >= 5) {
             CheckAddress.setIcon(check);
-        }else{
+        } else {
             CheckAddress.setIcon(null);
         }
     }//GEN-LAST:event_JTextDireccionFocusLost
 
     private void JTextPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextPhoneFocusLost
         // Codigo para poner Check si el campo esta lleno
-        if (JTextPhone.getText().length()==8){
+        if (JTextPhone.getText().length() == 8) {
             CheckPhone.setIcon(check);
-        }else{
+        } else {
             CheckPhone.setIcon(null);
         }
     }//GEN-LAST:event_JTextPhoneFocusLost
 
     private void JTextCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextCorreoFocusLost
         // Codigo para poner Check si el campo esta lleno
-        if (JTextCorreo.getText().contains("@")){
+        if (JTextCorreo.getText().contains("@")) {
             CheckEmail.setIcon(check);
-        }else{
+        } else {
             CheckEmail.setIcon(null);
         }
     }//GEN-LAST:event_JTextCorreoFocusLost
-   
+
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
-        
+
     }//GEN-LAST:event_ShowButtonActionPerformed
 
     private void JTextDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextDireccionKeyTyped
         //Codigo para limitar la cantidad de caracteres
-        if (JTextDireccion.getText().length()==15){
-        evt.consume(); 
+        if (JTextDireccion.getText().length() == 15) {
+            evt.consume();
         }
     }//GEN-LAST:event_JTextDireccionKeyTyped
 
     private void JTextCorreoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextCorreoKeyTyped
         //Codigo para limitar la cantidad de caracteres
-        if (JTextDireccion.getText().length()==20){
-        evt.consume(); 
+        if (JTextDireccion.getText().length() == 20) {
+            evt.consume();
         }
     }//GEN-LAST:event_JTextCorreoKeyTyped
 
