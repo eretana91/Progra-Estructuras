@@ -36,7 +36,6 @@ public class RegistroClientes extends javax.swing.JFrame {
         JTextPhone = new javax.swing.JTextField();
         JTextCorreo = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        JButtonSalir = new javax.swing.JButton();
         RegisterButton = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         JButtonMenuPrincipal = new javax.swing.JButton();
@@ -48,7 +47,7 @@ public class RegistroClientes extends javax.swing.JFrame {
         JTextCedula = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Register Client");
+        setTitle("Registro de Clientes");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(450, 400));
         setResizable(false);
@@ -111,14 +110,6 @@ public class RegistroClientes extends javax.swing.JFrame {
         });
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/gamer.png"))); // NOI18N
-
-        JButtonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/SignOut.png"))); // NOI18N
-        JButtonSalir.setPreferredSize(new java.awt.Dimension(50, 50));
-        JButtonSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JButtonSalirActionPerformed(evt);
-            }
-        });
 
         RegisterButton.setText("Registro");
         RegisterButton.addActionListener(new java.awt.event.ActionListener() {
@@ -191,41 +182,41 @@ public class RegistroClientes extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(61, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(JTextNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                            .addComponent(jLabel7)
-                            .addComponent(JTextApellido)
-                            .addComponent(jLabel6)
-                            .addComponent(JTextCorreo)
-                            .addComponent(JTextDireccion)
-                            .addComponent(JTextCedula)
-                            .addComponent(JTextPhone))
-                        .addGap(45, 45, 45)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(CleanButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(ShowButton))
-                .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(61, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3)
+                                    .addComponent(JTextNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(JTextApellido)
+                                    .addComponent(jLabel6)
+                                    .addComponent(JTextCorreo)
+                                    .addComponent(JTextDireccion)
+                                    .addComponent(JTextCedula)
+                                    .addComponent(JTextPhone))
+                                .addGap(45, 45, 45)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(CleanButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(ShowButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(58, 58, 58)
+                                .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10)))
                 .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
@@ -233,9 +224,11 @@ public class RegistroClientes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -248,31 +241,29 @@ public class RegistroClientes extends javax.swing.JFrame {
                         .addComponent(ShowButton)
                         .addGap(52, 52, 52))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(6, 6, 6)
                         .addComponent(JTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel8)
-                        .addGap(2, 2, 2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5)
-                        .addGap(4, 4, 4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
+                        .addContainerGap(42, Short.MAX_VALUE))))
         );
 
         getAccessibleContext().setAccessibleName("Regitro de Clientes");
@@ -283,31 +274,20 @@ public class RegistroClientes extends javax.swing.JFrame {
     private void JButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonMenuPrincipalActionPerformed
         dispose();
         MenuPrincipal frame = new MenuPrincipal();
-        frame.setSize(800, 650);
+        frame.setSize(650, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonMenuPrincipalActionPerformed
 
-    private void JButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonSalirActionPerformed
-        dispose();
-        Login frame = new Login();
-        frame.setSize(800, 650);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }//GEN-LAST:event_JButtonSalirActionPerformed
-
     private void CleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CleanButtonActionPerformed
         //Limpia todos los campos del formulario de registro
         JTextNombre.setText("");
-        JTextDireccion.setText("");
-        JTextPhone.setText("");
+        JTextApellido.setText("");
         JTextCorreo.setText("");
-        CheckName.setIcon(null);
-        CheckUsername.setIcon(null);
-        CheckPassword.setIcon(null);
-        CheckAddress.setIcon(null);
-        CheckPhone.setIcon(null);
-        CheckEmail.setIcon(null);
+        JTextDireccion.setText("");
+        JTextCedula.setText("");
+        JTextPhone.setText("");
+
     }//GEN-LAST:event_CleanButtonActionPerformed
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
@@ -348,11 +328,10 @@ public class RegistroClientes extends javax.swing.JFrame {
             //Conexion a base de datos
             ConexionDB conexion = new ConexionDB();
 
-
-            String SSQL = "INSERT INTO "+tabla+" VALUES "
-                    + "(1,'"+nuevo.getNombre()+"','"+nuevo.getApellido()+"'"
-                    + ",'"+nuevo.getEmail()+"','"+nuevo.getDireccion()+"'"
-                    + ",'"+nuevo.getCedula()+"','"+nuevo.getTelefono()+"' )";
+            String SSQL = "INSERT INTO " + tabla + " VALUES "
+                    + "(null,'" + nuevo.getNombre() + "','" + nuevo.getApellido() + "'"
+                    + ",'" + nuevo.getEmail() + "','" + nuevo.getDireccion() + "'"
+                    + ",'" + nuevo.getCedula() + "','" + nuevo.getTelefono() + "' )";
             System.out.println(SSQL);
             Connection conect = null;
 
@@ -373,13 +352,11 @@ public class RegistroClientes extends javax.swing.JFrame {
 
             //Limpia todos los campos del formulario de registro
             JTextNombre.setText("");
-            JTextDireccion.setText("");
-            JTextPhone.setText("");
+            JTextApellido.setText("");
             JTextCorreo.setText("");
-            CheckName.setIcon(null);
-            CheckAddress.setIcon(null);
-            CheckPhone.setIcon(null);
-            CheckEmail.setIcon(null);
+            JTextDireccion.setText("");
+            JTextCedula.setText("");
+            JTextPhone.setText("");
 
         }
     }//GEN-LAST:event_RegisterButtonActionPerformed
@@ -415,39 +392,19 @@ public class RegistroClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextPhoneKeyTyped
 
     private void JTextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextNombreFocusLost
-        // Codigo para poner Check si el campo esta lleno
-        if (JTextNombre.getText().length() >= 5) {
-            CheckName.setIcon(check);
-        } else {
-            CheckName.setIcon(null);
-        }
+
     }//GEN-LAST:event_JTextNombreFocusLost
 
     private void JTextDireccionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextDireccionFocusLost
-        // Codigo para poner Check si el campo esta lleno
-        if (JTextDireccion.getText().length() >= 5) {
-            CheckAddress.setIcon(check);
-        } else {
-            CheckAddress.setIcon(null);
-        }
+
     }//GEN-LAST:event_JTextDireccionFocusLost
 
     private void JTextPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextPhoneFocusLost
-        // Codigo para poner Check si el campo esta lleno
-        if (JTextPhone.getText().length() == 8) {
-            CheckPhone.setIcon(check);
-        } else {
-            CheckPhone.setIcon(null);
-        }
+
     }//GEN-LAST:event_JTextPhoneFocusLost
 
     private void JTextCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextCorreoFocusLost
-        // Codigo para poner Check si el campo esta lleno
-        if (JTextCorreo.getText().contains("@")) {
-            CheckEmail.setIcon(check);
-        } else {
-            CheckEmail.setIcon(null);
-        }
+
     }//GEN-LAST:event_JTextCorreoFocusLost
 
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
@@ -530,7 +487,6 @@ public class RegistroClientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CleanButton;
     private javax.swing.JButton JButtonMenuPrincipal;
-    private javax.swing.JButton JButtonSalir;
     private javax.swing.JTextField JTextApellido;
     private javax.swing.JTextField JTextCedula;
     private javax.swing.JTextField JTextCorreo;

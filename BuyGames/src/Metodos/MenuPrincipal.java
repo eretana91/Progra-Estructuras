@@ -152,7 +152,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void JButtonRegistroJuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroJuegosActionPerformed
         dispose();
         RegistroJuegos frame = new RegistroJuegos();
-        frame.setSize(450, 400);
+        frame.setSize(450, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonRegistroJuegosActionPerformed
