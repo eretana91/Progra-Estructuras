@@ -1,13 +1,16 @@
 package Objectos;
-/**
- *
- * @author erick.retana
- */
+
 public class VideoJuegos {
+
     private String nombre;
-    private String apellido;
-    private String direccion;
-    private String telefono;
-    private String email;
-    private String cedula;
+    private int precio;
+    private char categoria;
+    private String rutaImagen;
+
+    public void VideoJuegos(String nombre, int precio, char categoria, String rutaImagen) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+        this.rutaImagen = rutaImagen;
+    }
 }
