@@ -3,6 +3,7 @@ package Metodos;
 import Metodos.CarritoCompras;
 import Formularios.Login;
 import Formularios.RegistroClientes;
+import Formularios.RegistroJuegos;
 
 /**
  *
@@ -149,7 +150,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_JButtonTiendaActionPerformed
 
     private void JButtonRegistroJuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroJuegosActionPerformed
-        // TODO add your handling code here:
+        dispose();
+        RegistroJuegos frame = new RegistroJuegos();
+        frame.setSize(450, 400);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_JButtonRegistroJuegosActionPerformed
 
     private void JButtonRegistroEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroEmpleadoActionPerformed
