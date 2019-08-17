@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Autenticacion {
 
-    DataBase metodospool = new DataBase();
+    ConexionDB conexion = new ConexionDB();
     
     public int validarIngreso(){
         String usuario = Login.JTextUsername.getText();
@@ -25,7 +25,7 @@ public class Autenticacion {
         Connection conect = null;
         
         try {
-            conect = metodospool.dataSource.getConnection();
+            conect = conexion.dataSource.getConnection();
             Statement st = conect.createStatement();
             ResultSet rs = st.executeQuery(SSQL);
             

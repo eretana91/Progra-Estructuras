@@ -1,7 +1,7 @@
 package Formularios;
 
 import Metodos.Autenticacion;
-import Metodos.DataBase;
+import Metodos.ConexionDB;
 import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
@@ -152,9 +152,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextPasswordActionPerformed
 
     private void EnterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterButtonActionPerformed
-        Autenticacion metodoslogin = new Autenticacion();
+        Autenticacion conexion = new Autenticacion();
 
-        if (metodoslogin.validarIngreso() == 1) {
+        if (conexion.validarIngreso() == 1) {
             dispose();
             MenuPrincipal frame = new MenuPrincipal();
             frame.setSize(650, 450);
@@ -183,7 +183,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextPasswordKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        DataBase metodospool = new DataBase();
+        ConexionDB metodospool = new ConexionDB();
         java.sql.Connection cn = null;
 
         try {

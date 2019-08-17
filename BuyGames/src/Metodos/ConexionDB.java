@@ -5,7 +5,7 @@ import org.apache.commons.dbcp.BasicDataSource;
  *
  * @author erick.retana
  */
-public class DataBase {
+public class ConexionDB {
 
     public DataSource dataSource;
     public String db = "buygames";
@@ -13,7 +13,7 @@ public class DataBase {
     public String user = "dbconect";
     public String pass = "Temporal123456789";
 
-    public DataBase() {
+    public ConexionDB() {
 
         inicializaDataSource();
 

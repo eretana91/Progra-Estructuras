@@ -1,7 +1,12 @@
 package Formularios;
 
+import Metodos.ConexionDB;
+import java.sql.Statement;
 import Objectos.Cliente;
 import Metodos.MenuPrincipal;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,12 +41,6 @@ public class RegistroClientes extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         JButtonMenuPrincipal = new javax.swing.JButton();
         CleanButton = new javax.swing.JButton();
-        CheckName = new javax.swing.JLabel();
-        CheckUsername = new javax.swing.JLabel();
-        CheckPassword = new javax.swing.JLabel();
-        CheckAddress = new javax.swing.JLabel();
-        CheckPhone = new javax.swing.JLabel();
-        CheckEmail = new javax.swing.JLabel();
         ShowButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         JTextApellido = new javax.swing.JTextField();
@@ -145,30 +144,6 @@ public class RegistroClientes extends javax.swing.JFrame {
             }
         });
 
-        CheckName.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckName.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckName.setPreferredSize(new java.awt.Dimension(30, 30));
-
-        CheckUsername.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckUsername.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckUsername.setPreferredSize(new java.awt.Dimension(30, 30));
-
-        CheckPassword.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckPassword.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckPassword.setPreferredSize(new java.awt.Dimension(30, 30));
-
-        CheckAddress.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckAddress.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckAddress.setPreferredSize(new java.awt.Dimension(30, 30));
-
-        CheckPhone.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckPhone.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckPhone.setPreferredSize(new java.awt.Dimension(30, 30));
-
-        CheckEmail.setMaximumSize(new java.awt.Dimension(30, 30));
-        CheckEmail.setMinimumSize(new java.awt.Dimension(30, 30));
-        CheckEmail.setPreferredSize(new java.awt.Dimension(30, 30));
-
         ShowButton.setText("Ver Clientes");
         ShowButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +198,7 @@ public class RegistroClientes extends javax.swing.JFrame {
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(61, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel5)
                             .addComponent(jLabel8)
@@ -250,14 +225,6 @@ public class RegistroClientes extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CheckName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CheckAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
                 .addGap(30, 30, 30))
         );
@@ -266,53 +233,30 @@ public class RegistroClientes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3))
+                    .addComponent(jLabel11)
                     .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CleanButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(CleanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(CheckUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(CheckPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(36, 36, 36))
-                                            .addComponent(CheckAddress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(98, 98, 98))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(CheckPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(38, 38, 38))
-                                            .addComponent(CheckEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(118, 118, 118)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(CheckName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(129, 129, 129)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ShowButton))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ShowButton)
+                        .addGap(52, 52, 52))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(JTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JTextCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,30 +333,55 @@ public class RegistroClientes extends javax.swing.JFrame {
         }
         if (JTextCedula.getText().length() < 9) {
             JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de cedula valido");
-            return;
+
         } else {
+
+            String nombre = JTextNombre.getText();
+            String apellido = JTextApellido.getText();
+            String direccion = JTextDireccion.getText();
+            String telefono = JTextPhone.getText();
+            String correo = JTextCorreo.getText();
+            String cedula = JTextCedula.getText();
+            String tabla = "clientes";
+            Cliente nuevo = new Cliente(nombre, apellido, direccion, telefono, correo, cedula);
+
+            //Conexion a base de datos
+            ConexionDB conexion = new ConexionDB();
+
+
+            String SSQL = "INSERT INTO "+tabla+" VALUES "
+                    + "(1,'"+nuevo.getNombre()+"','"+nuevo.getApellido()+"'"
+                    + ",'"+nuevo.getEmail()+"','"+nuevo.getDireccion()+"'"
+                    + ",'"+nuevo.getCedula()+"','"+nuevo.getTelefono()+"' )";
+            System.out.println(SSQL);
+            Connection conect = null;
+
+            try {
+                conect = conexion.dataSource.getConnection();
+                Statement st = conect.createStatement();
+                st.executeUpdate(SSQL);
+
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, ex, "Error de conexión", JOptionPane.ERROR_MESSAGE);
+            } finally {
+            }
+            try {
+                conect.close();
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, ex, "Error de desconexión", JOptionPane.ERROR_MESSAGE);
+            }
+
+            //Limpia todos los campos del formulario de registro
+            JTextNombre.setText("");
+            JTextDireccion.setText("");
+            JTextPhone.setText("");
+            JTextCorreo.setText("");
+            CheckName.setIcon(null);
+            CheckAddress.setIcon(null);
+            CheckPhone.setIcon(null);
+            CheckEmail.setIcon(null);
+
         }
-        Cliente nuevo = new Cliente("", "", "", "", "", "");
-        String nombre = JTextNombre.getText();
-        String apellido = JTextApellido.getText();
-        String email = JTextCorreo.getText();
-        String direccion = JTextDireccion.getText();
-        String cedula = JTextCedula.getText();
-        String telefono = JTextPhone.getText();
-
-        JOptionPane.showMessageDialog(null, "Se registro correctamente el Cliente");
-
-        //Limpia todos los campos del formulario de registro
-        JTextNombre.setText("");
-        JTextDireccion.setText("");
-        JTextPhone.setText("");
-        JTextCorreo.setText("");
-        CheckName.setIcon(null);
-        CheckAddress.setIcon(null);
-        CheckPhone.setIcon(null);
-        CheckEmail.setIcon(null);
-
-
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
 
@@ -559,12 +528,6 @@ public class RegistroClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CheckAddress;
-    private javax.swing.JLabel CheckEmail;
-    private javax.swing.JLabel CheckName;
-    private javax.swing.JLabel CheckPassword;
-    private javax.swing.JLabel CheckPhone;
-    private javax.swing.JLabel CheckUsername;
     private javax.swing.JButton CleanButton;
     private javax.swing.JButton JButtonMenuPrincipal;
     private javax.swing.JButton JButtonSalir;
