@@ -14,7 +14,7 @@ public class Main {
 
         //Llamado a la primer ventana de Login
         Login frame = new Login();
-        frame.setSize(800, 650);
+        frame.setSize(820,620);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
