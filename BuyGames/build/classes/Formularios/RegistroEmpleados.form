@@ -53,7 +53,7 @@
                           <Component id="JTextCedula" alignment="0" max="32767" attributes="0"/>
                           <Component id="JTextUsuario" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                          <Component id="JTextPhone1" max="32767" attributes="0"/>
+                          <Component id="JTextTelefono" max="32767" attributes="0"/>
                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                           <Component id="JTextPassword2" max="32767" attributes="0"/>
@@ -127,7 +127,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="JTextPhone1" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="JTextTelefono" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -191,6 +191,7 @@
     <Component class="javax.swing.JTextField" name="JTextUsuario">
       <Events>
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="JTextUsuarioFocusLost"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTextUsuarioActionPerformed"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="JTextUsuarioKeyTyped"/>
       </Events>
     </Component>
@@ -278,10 +279,10 @@
         <Property name="text" type="java.lang.String" value="Usuario:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="JTextPhone1">
+    <Component class="javax.swing.JTextField" name="JTextTelefono">
       <Events>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="JTextPhone1FocusLost"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="JTextPhone1KeyTyped"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="JTextTelefonoFocusLost"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="JTextTelefonoKeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
@@ -299,18 +300,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTextPassword2ActionPerformed"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="JTextPassword2KeyTyped"/>
       </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JPasswordField" name="JTextPassword1">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTextPassword1ActionPerformed"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="JTextPassword1KeyTyped"/>
       </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

@@ -328,7 +328,7 @@ public class RegistroClientes extends javax.swing.JFrame {
                     + "(null,'" + nuevo.getNombre() + "','" + nuevo.getApellido() + "'"
                     + ",'" + nuevo.getEmail() + "','" + nuevo.getDireccion() + "'"
                     + ",'" + nuevo.getCedula() + "','" + nuevo.getTelefono() + "' )";
-            System.out.println(SSQL);
+
             Connection conect = null;
 
             try {

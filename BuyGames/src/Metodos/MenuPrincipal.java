@@ -134,7 +134,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void JButtonRegistroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroClienteActionPerformed
         dispose();
         RegistroClientes frame = new RegistroClientes();
-        frame.setSize(450, 400);
+        frame.setSize(450, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 

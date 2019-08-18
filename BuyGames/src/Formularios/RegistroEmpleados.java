@@ -4,6 +4,7 @@ import Metodos.ConexionDB;
 import java.sql.Statement;
 import Objectos.Cliente;
 import Metodos.MenuPrincipal;
+import Objectos.Empleado;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -46,7 +47,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         JTextCedula = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        JTextPhone1 = new javax.swing.JTextField();
+        JTextTelefono = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         JTextPassword2 = new javax.swing.JPasswordField();
@@ -96,6 +97,11 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         JTextUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 JTextUsuarioFocusLost(evt);
+            }
+        });
+        JTextUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTextUsuarioActionPerformed(evt);
             }
         });
         JTextUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -186,14 +192,14 @@ public class RegistroEmpleados extends javax.swing.JFrame {
 
         jLabel9.setText("Usuario:");
 
-        JTextPhone1.addFocusListener(new java.awt.event.FocusAdapter() {
+        JTextTelefono.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                JTextPhone1FocusLost(evt);
+                JTextTelefonoFocusLost(evt);
             }
         });
-        JTextPhone1.addKeyListener(new java.awt.event.KeyAdapter() {
+        JTextTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                JTextPhone1KeyTyped(evt);
+                JTextTelefonoKeyTyped(evt);
             }
         });
 
@@ -246,7 +252,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                             .addComponent(JTextCedula)
                             .addComponent(JTextUsuario)
                             .addComponent(jLabel9)
-                            .addComponent(JTextPhone1)
+                            .addComponent(JTextTelefono)
                             .addComponent(jLabel12)
                             .addComponent(jLabel13)
                             .addComponent(JTextPassword2)
@@ -305,7 +311,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JTextPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JTextTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -345,8 +351,12 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         JTextApellido.setText("");
         JTextCorreo.setText("");
         JTextDireccion.setText("");
+        JTextTelefono.setText("");
         JTextCedula.setText("");
         JTextUsuario.setText("");
+        JTextPassword1.setText("");
+        JTextPassword2.setText("");
+
 
     }//GEN-LAST:event_CleanButtonActionPerformed
 
@@ -372,7 +382,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Por favor ingrese una direccion valida");
                 return;
             }
-            if (JTextUsuario.getText().length() < 8) {
+            if (JTextTelefono.getText().length() < 8) {
                 JOptionPane.showMessageDialog(null, "Por favor ingrese un numero de telefono valido");
                 return;
             }
@@ -384,26 +394,32 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 String nombre = JTextNombre.getText();
                 String apellido = JTextApellido.getText();
                 String direccion = JTextDireccion.getText();
-                String telefono = JTextUsuario.getText();
+                String telefono = JTextTelefono.getText();
                 String correo = JTextCorreo.getText();
                 String cedula = JTextCedula.getText();
-                String tabla = "clientes";
-                Cliente nuevo = new Cliente(nombre, apellido, direccion, telefono, correo, cedula);
+                String usuario = JTextUsuario.getText();
+                String clave = String.valueOf(JTextPassword1.getPassword());
+                String tabla = "empleados";
+                String tablaUsuarios = "usuarios";
+                Empleado nuevo = new Empleado(usuario,clave,nombre,apellido,direccion,telefono,correo,cedula);
 
                 //Conexion a base de datos
                 ConexionDB conexion = new ConexionDB();
 
-                String SSQL = "INSERT INTO " + tabla + " VALUES "
+                String SSQL1 = "INSERT INTO " + tabla + " VALUES "
                         + "(null,'" + nuevo.getNombre() + "','" + nuevo.getApellido() + "'"
                         + ",'" + nuevo.getEmail() + "','" + nuevo.getDireccion() + "'"
                         + ",'" + nuevo.getCedula() + "','" + nuevo.getTelefono() + "' )";
-                System.out.println(SSQL);
+                String SSQL2 = "INSERT INTO " +tablaUsuarios+ " VALUES (null, '"+nuevo.getUsername()+"'"
+                        + ", '"+nuevo.getPassword()+"')";
+                
                 Connection conect = null;
 
                 try {
                     conect = conexion.dataSource.getConnection();
                     Statement st = conect.createStatement();
-                    st.executeUpdate(SSQL);
+                    st.executeUpdate(SSQL1);
+                    st.executeUpdate(SSQL2);
 
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(null, ex, "Error de conexión", JOptionPane.ERROR_MESSAGE);
@@ -420,12 +436,15 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 JTextApellido.setText("");
                 JTextCorreo.setText("");
                 JTextDireccion.setText("");
+                JTextTelefono.setText("");
                 JTextCedula.setText("");
                 JTextUsuario.setText("");
+                JTextPassword1.setText("");
+                JTextPassword2.setText("");
 
             }
-        }else{
-            JOptionPane.showMessageDialog(null,"La nueva contraseña y la contraseña de confirmación son diferentes");
+        } else {
+            JOptionPane.showMessageDialog(null, "La nueva contraseña y la contraseña de confirmación son diferentes");
         }
     }//GEN-LAST:event_JButtonAgregarActionPerformed
 
@@ -449,11 +468,6 @@ public class RegistroEmpleados extends javax.swing.JFrame {
     private void JTextUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextUsuarioKeyTyped
         //Codigo para limitar la cantidad de caracteres
         if (JTextUsuario.getText().length() == 8) {
-            evt.consume();
-        }
-        //Codigo para solo permitir numeros en el campo Telefono del Formulario
-        char TipoDeTecla = evt.getKeyChar();
-        if (!Character.isDigit(TipoDeTecla)) {
             evt.consume();
         }
     }//GEN-LAST:event_JTextUsuarioKeyTyped
@@ -516,13 +530,13 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTextCedulaActionPerformed
 
-    private void JTextPhone1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextPhone1FocusLost
+    private void JTextTelefonoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_JTextTelefonoFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTextPhone1FocusLost
+    }//GEN-LAST:event_JTextTelefonoFocusLost
 
-    private void JTextPhone1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextPhone1KeyTyped
+    private void JTextTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextTelefonoKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTextPhone1KeyTyped
+    }//GEN-LAST:event_JTextTelefonoKeyTyped
 
     private void JTextPassword2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextPassword2ActionPerformed
 
@@ -541,6 +555,10 @@ public class RegistroEmpleados extends javax.swing.JFrame {
     private void JTextPassword1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextPassword1KeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_JTextPassword1KeyTyped
+
+    private void JTextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTextUsuarioActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -590,9 +608,9 @@ public class RegistroEmpleados extends javax.swing.JFrame {
     private javax.swing.JTextField JTextCorreo;
     private javax.swing.JTextField JTextDireccion;
     private javax.swing.JTextField JTextNombre;
-    public static javax.swing.JPasswordField JTextPassword1;
-    public static javax.swing.JPasswordField JTextPassword2;
-    private javax.swing.JTextField JTextPhone1;
+    private javax.swing.JPasswordField JTextPassword1;
+    private javax.swing.JPasswordField JTextPassword2;
+    private javax.swing.JTextField JTextTelefono;
     private javax.swing.JTextField JTextUsuario;
     private javax.swing.JButton ShowButton;
     private javax.swing.JLabel jLabel10;
