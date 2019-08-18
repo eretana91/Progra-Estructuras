@@ -49,10 +49,10 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         JTextPassword1 = new javax.swing.JPasswordField();
         jLabel12 = new javax.swing.JLabel();
-        JButtonMenuPrincipal = new javax.swing.JButton();
         ShowButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         CleanButton = new javax.swing.JButton();
+        JButtonMenuPrincipal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Registro de Clientes");
@@ -208,14 +208,6 @@ public class RegistroEmpleados extends javax.swing.JFrame {
 
         jLabel12.setText("Confirmar contraseña:");
 
-        JButtonMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/home.png"))); // NOI18N
-        JButtonMenuPrincipal.setPreferredSize(new java.awt.Dimension(50, 50));
-        JButtonMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JButtonMenuPrincipalActionPerformed(evt);
-            }
-        });
-
         ShowButton.setText("Ver Empleados");
         ShowButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,6 +224,15 @@ public class RegistroEmpleados extends javax.swing.JFrame {
             }
         });
 
+        JButtonMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/Icons/botonMenu.png"))); // NOI18N
+        JButtonMenuPrincipal.setBorder(null);
+        JButtonMenuPrincipal.setPreferredSize(new java.awt.Dimension(50, 50));
+        JButtonMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonMenuPrincipalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -241,7 +242,10 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(JTextNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
@@ -280,9 +284,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel10)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(ShowButton)
-                                                .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(ShowButton)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(44, 44, 44)
                                         .addComponent(JButtonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -294,12 +296,11 @@ public class RegistroEmpleados extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3))
-                    .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel11)
+                    .addComponent(JButtonMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(12, 12, 12)
                 .addComponent(JTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
@@ -366,14 +367,6 @@ public class RegistroEmpleados extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void JButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonMenuPrincipalActionPerformed
-        dispose();
-        MenuPrincipal frame = new MenuPrincipal();
-        frame.setSize(650, 440);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }//GEN-LAST:event_JButtonMenuPrincipalActionPerformed
 
     private void CleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CleanButtonActionPerformed
         //Limpia todos los campos del formulario de registro
@@ -589,6 +582,14 @@ public class RegistroEmpleados extends javax.swing.JFrame {
     private void JTextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTextUsuarioActionPerformed
+
+    private void JButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonMenuPrincipalActionPerformed
+        dispose();
+        MenuPrincipal frame = new MenuPrincipal();
+        frame.setSize(650, 440);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }//GEN-LAST:event_JButtonMenuPrincipalActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -145,7 +145,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void JButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonSalirActionPerformed
         dispose();
         Login frame = new Login();
-        frame.setSize(820,620);
+        frame.setSize(820,580);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonSalirActionPerformed
@@ -172,7 +172,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void JButtonRegistroJuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroJuegosActionPerformed
         dispose();
         RegistroJuegos frame = new RegistroJuegos();
-        frame.setSize(450, 450);
+        frame.setSize(280, 350);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonRegistroJuegosActionPerformed
@@ -180,7 +180,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void JButtonRegistroEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroEmpleadoActionPerformed
         dispose();
         RegistroEmpleados frame = new RegistroEmpleados();
-        frame.setSize(450,350);
+        frame.setSize(450,610);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonRegistroEmpleadoActionPerformed
