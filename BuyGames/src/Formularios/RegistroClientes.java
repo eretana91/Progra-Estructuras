@@ -5,7 +5,6 @@ import java.sql.Statement;
 import Objectos.Cliente;
 import Metodos.MenuPrincipal;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
