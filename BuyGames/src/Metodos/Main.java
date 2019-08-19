@@ -18,7 +18,7 @@ public class Main {
         frame.setSize(820,580);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        Reporte.crearExcel();
+        Reporte.crearExcelEmpleados();
      
     }
 
