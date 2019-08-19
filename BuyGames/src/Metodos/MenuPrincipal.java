@@ -1,6 +1,5 @@
 package Metodos;
 
-import Metodos.CarritoCompras;
 import Formularios.Login;
 import Formularios.RegistroClientes;
 import Formularios.RegistroEmpleados;
