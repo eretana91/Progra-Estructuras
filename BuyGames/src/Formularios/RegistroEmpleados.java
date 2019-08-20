@@ -2,7 +2,6 @@ package Formularios;
 
 import Metodos.ConexionDB;
 import java.sql.Statement;
-import Metodos.MenuPrincipal;
 import Metodos.ReporteEmpleados;
 import Objectos.Empleado;
 import java.sql.Connection;
@@ -54,7 +53,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
         JButtonMenuPrincipal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Registro de Clientes");
+        setTitle("Registro de Empleados");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(450, 550));
         setResizable(false);
@@ -452,7 +451,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(null, ex, "Error de desconexión", JOptionPane.ERROR_MESSAGE);
                 }
-                JOptionPane.showMessageDialog(null, "Se agrego el nuevo Cliente a la Base de Datos");
+                JOptionPane.showMessageDialog(null, "Se agrego el nuevo Empleado a la Base de Datos");
                 //Limpia todos los campos del formulario de registro
                 JTextNombre.setText("");
                 JTextApellido.setText("");

@@ -2,7 +2,6 @@ package Formularios;
 
 import Metodos.Autenticacion;
 import Metodos.ConexionDB;
-import Metodos.MenuPrincipal;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 

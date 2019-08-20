@@ -1,5 +1,6 @@
-package Metodos;
+package Formularios;
 
+import Formularios.CarritoCompras;
 import Formularios.Login;
 import Formularios.RegistroClientes;
 import Formularios.RegistroEmpleados;
@@ -170,8 +171,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void JButtonRegistroJuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonRegistroJuegosActionPerformed
         dispose();
-        RegistroJuegos frame = new RegistroJuegos();
-        frame.setSize(280, 350);
+        //RegistroJuegos frame = new RegistroJuegos();
+        Mantenimiento frame = new Mantenimiento();
+        frame.setSize(600, 500);
+        //frame.setSize(280, 350);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }//GEN-LAST:event_JButtonRegistroJuegosActionPerformed

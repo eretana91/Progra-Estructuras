@@ -3,7 +3,6 @@ package Formularios;
 import Metodos.ConexionDB;
 import java.sql.Statement;
 import Objectos.Cliente;
-import Metodos.MenuPrincipal;
 import Metodos.ReporteClientes;
 import java.sql.Connection;
 import java.sql.SQLException;
