@@ -2,11 +2,10 @@ package Formularios;
 
 import Metodos.ConexionDB;
 import java.sql.Statement;
-import Objectos.Cliente;
 import Metodos.MenuPrincipal;
+import Metodos.ReporteEmpleados;
 import Objectos.Empleado;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -208,7 +207,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
 
         jLabel12.setText("Confirmar contraseña:");
 
-        ShowButton.setText("Ver Empleados");
+        ShowButton.setText("Reporte Excel");
         ShowButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShowButtonActionPerformed(evt);
@@ -424,7 +423,7 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                 String clave = String.valueOf(JTextPassword1.getPassword());
                 String tabla = "empleados";
                 String tablaUsuarios = "usuarios";
-                Empleado nuevo = new Empleado(usuario,clave,nombre,apellido,direccion,telefono,correo,cedula);
+                Empleado nuevo = new Empleado(usuario, clave, nombre, apellido, direccion, telefono, correo, cedula);
 
                 //Conexion a base de datos
                 ConexionDB conexion = new ConexionDB();
@@ -433,9 +432,9 @@ public class RegistroEmpleados extends javax.swing.JFrame {
                         + "(null,'" + nuevo.getNombre() + "','" + nuevo.getApellido() + "'"
                         + ",'" + nuevo.getEmail() + "','" + nuevo.getDireccion() + "'"
                         + ",'" + nuevo.getCedula() + "','" + nuevo.getTelefono() + "' )";
-                String SSQL2 = "INSERT INTO " +tablaUsuarios+ " VALUES (null, '"+nuevo.getUsername()+"'"
-                        + ", '"+nuevo.getPassword()+"')";
-                
+                String SSQL2 = "INSERT INTO " + tablaUsuarios + " VALUES (null, '" + nuevo.getUsername() + "'"
+                        + ", '" + nuevo.getPassword() + "')";
+
                 Connection conect = null;
 
                 try {
@@ -512,7 +511,8 @@ public class RegistroEmpleados extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextCorreoFocusLost
 
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
-
+        ReporteEmpleados reporte = new ReporteEmpleados();
+        reporte.start();
     }//GEN-LAST:event_ShowButtonActionPerformed
 
     private void JTextDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextDireccionKeyTyped

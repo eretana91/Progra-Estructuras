@@ -19,10 +19,7 @@ public class Main {
         Login frame = new Login();
         frame.setSize(820,580);
         frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        Reporte.crearExcelClientes();
-        Reporte.crearExcelEmpleados();
-     
+        frame.setVisible(true);   
     }
 
 }

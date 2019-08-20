@@ -4,6 +4,7 @@ import Metodos.ConexionDB;
 import java.sql.Statement;
 import Objectos.Cliente;
 import Metodos.MenuPrincipal;
+import Metodos.ReporteClientes;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -156,7 +157,7 @@ public class RegistroClientes extends javax.swing.JFrame {
             }
         });
 
-        ShowButton.setText("Ver Clientes");
+        ShowButton.setText("Reporte Excel");
         ShowButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShowButtonActionPerformed(evt);
@@ -409,7 +410,8 @@ public class RegistroClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_JTextCorreoFocusLost
 
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
-
+        ReporteClientes reporte = new ReporteClientes();
+        reporte.start();
     }//GEN-LAST:event_ShowButtonActionPerformed
 
     private void JTextDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextDireccionKeyTyped
