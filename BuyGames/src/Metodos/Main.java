@@ -1,6 +1,9 @@
 package Metodos;
 
 import Formularios.Login;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  *
@@ -10,13 +13,13 @@ import Formularios.Login;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, FileNotFoundException, SQLException {
 
         //Llamado a la primer ventana de Login
         Login frame = new Login();
-        frame.setSize(800, 650);
+        frame.setSize(820,580);
         frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        frame.setVisible(true);   
     }
 
 }

@@ -1,0 +1,1 @@
+INSERT INTO empleados VALUES (null, 'admin','sistema','systemas@gmail.com','Costa Rica','777777777','55555555')

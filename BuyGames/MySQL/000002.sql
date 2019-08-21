@@ -1,0 +1,1 @@
+INSERT INTO usuarios VALUES (null, 'admin','password')

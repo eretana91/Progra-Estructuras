@@ -1,30 +1,13 @@
 package Objectos;
+
 /**
  *
  * @author Erick Retana Sánchez
  *
  *
  */
-public class Persona {
+abstract class Persona {
 
-    //Variables para Persona
-    private static int personas[][];
-
-    public static int[][] getUsers() {
-        return personas;
-    }
-
-    public static void setUsers(int[][] aClientes) {
-        personas = aClientes;
-    }
-
-    public static int[][] getClientes() {
-        return personas;
-    }
-
-    public static void setClientes(int[][] aClientes) {
-        personas = aClientes;
-    }
     private String nombre;
     private String apellido;
     private String direccion;
@@ -61,8 +44,8 @@ public class Persona {
         return direccion;
     }
 
-    public void setDirecion(String direcion) {
-        this.direccion = direcion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTelefono() {
@@ -88,15 +71,5 @@ public class Persona {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
-    
-   
 
-    @Override
-    public String toString() {
-        return "Nombre= " + nombre
-                + "\nApellido: " + apellido
-                + "\nDirecion: " + direccion
-                + "\nTelefono: " + telefono
-                + "\nEmail: " + email;
-    }
 }
