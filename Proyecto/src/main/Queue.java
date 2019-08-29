@@ -7,15 +7,20 @@ public class Queue {
     public Node top;
     public int counter;
 
-    public boolean isEmpty(){
+    public Queue() {
+        this.top = null;
+        this.counter = 0;
+    }
+
+    public boolean isEmpty() {
         boolean flag;
         flag = false;
-        if (top == null){
+        if (top == null) {
             flag = true;
         }
         return flag;
     }
-    
+
     public void add(int value) {
         Node recent;
         recent = new Node();
@@ -37,11 +42,16 @@ public class Queue {
     }
 
     public int pop() {
-        Node aux = top;
-        top = top.next();
-        aux.setNext(null);
-        counter --;
-        return aux.getValue();
+        if (!isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No hay clientes en la cola", "Error", JOptionPane.ERROR_MESSAGE);
+            return 0;
+        } else {
+            Node aux = top;
+            top = top.next();
+            aux.setNext(null);
+            counter--;
+            return aux.getValue();
+        }
     }
 
     public void review() {
