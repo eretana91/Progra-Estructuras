@@ -1,15 +1,17 @@
 package main;
 
-public class Nodo {
+public class Node {
 
     private int value;
-    private Nodo next;
+    private Node next;
 
     public void Nodo(int value) {
         this.value = value;
         this.next = null;
     }
 
+    
+    
     public int getValue() {
         return value;
     }
@@ -18,11 +20,11 @@ public class Nodo {
         this.value = value;
     }
 
-    public Nodo next() {
+    public Node next() {
         return next;
     }
 
-    public void setNext() {
+    public void setNext(Node next) {
         this.next = next;
     }
 
