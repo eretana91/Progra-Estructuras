@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Colas {
 
     private Nodo inicio, fondo, aux;
-    public int tamanio; 
+    public int tamanio;
 
     public Colas() {
         inicio = null;
@@ -14,7 +14,7 @@ public class Colas {
     }
 
     public boolean vacia() {
-       return inicio == null;
+        return inicio == null;
     }
 
     void insertar(int info) {
@@ -46,12 +46,18 @@ public class Colas {
             System.out.println(informacion);
             tamanio--;
             return informacion;
-           
+
         } else {
             System.out.println("0");
             return 0;
-            
+
         }
+    }
+
+    public int getInicio() {
+
+        return inicio.getDato();
+
     }
 
     public void imprimir() {
