@@ -5,6 +5,8 @@ import java.awt.Component;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class principal extends javax.swing.JFrame {
 
@@ -33,12 +35,11 @@ public class principal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel_Espacios_Disponibles = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel_clientes_espera = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jButton_agregar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -274,18 +275,21 @@ public class principal extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
-        jLabel2.setText("Espacios disponibles:");
+        jLabel4.setText("Clientes en espera:");
 
-        jLabel_Espacios_Disponibles.setText("0");
-
-        jLabel4.setText("Espacios máximos:");
-
-        jLabel5.setText("6");
+        jLabel_clientes_espera.setText("0");
 
         jButton_agregar.setText("Agregar");
         jButton_agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_agregarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Iniciar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -297,40 +301,36 @@ public class principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jSeparator1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton_agregar)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jLabel5))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel_Espacios_Disponibles)))))))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addComponent(jLabel_clientes_espera))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton_agregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel_Espacios_Disponibles))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(158, 158, 158)
+                            .addComponent(jLabel_clientes_espera))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton_agregar))
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -341,58 +341,25 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_agregarActionPerformed
-        if (colas.tamanio < max){
-           int n = 10;
+        if (colas.tamanio < max) {
+            int n = 10;
             dato = (int) (Math.random() * n) + 5;
-            colas.insertar(dato); 
-        }else{
+            colas.insertar(dato);
+        } else {
             System.out.println("No hay espacios disponibles");
         }
-        
-        
-        switch (colas.tamanio) {
-            case 1:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                break;
-            case 2:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                jPanel_pos_2.setBackground(Color.GREEN);
-                break;
-            case 3:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                jPanel_pos_2.setBackground(Color.GREEN);
-                jPanel_pos_3.setBackground(Color.GREEN);
-                break;
-            case 4:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                jPanel_pos_2.setBackground(Color.GREEN);
-                jPanel_pos_3.setBackground(Color.GREEN);
-                jPanel_pos_4.setBackground(Color.GREEN);
-                break;
-            case 5:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                jPanel_pos_2.setBackground(Color.GREEN);
-                jPanel_pos_3.setBackground(Color.GREEN);
-                jPanel_pos_4.setBackground(Color.GREEN);
-                jPanel_pos_5.setBackground(Color.GREEN);
-                break;
-            case 6:
-                jPanel_pos_1.setBackground(Color.GREEN);
-                jPanel_pos_2.setBackground(Color.GREEN);
-                jPanel_pos_3.setBackground(Color.GREEN);
-                jPanel_pos_4.setBackground(Color.GREEN);
-                jPanel_pos_5.setBackground(Color.GREEN);
-                jPanel_pos_6.setBackground(Color.GREEN);
-                break;
-            
-            default:
-                System.out.println("No hay espacios disponibles");
 
-        }
+        pintaFila();
 
-        jLabel_Espacios_Disponibles.setText(Integer.toString(colas.tamanio));
+        jLabel_clientes_espera.setText(Integer.toString(colas.tamanio));
 
     }//GEN-LAST:event_jButton_agregarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        atender();
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
 
@@ -431,17 +398,16 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel Jlabel_cajero_1;
     private javax.swing.JPanel Jlabel_cajero_2;
     private javax.swing.JPanel Jlabel_cajero_3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_agregar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel_Espacios_Disponibles;
+    private javax.swing.JLabel jLabel_clientes_espera;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel_pos_1;
@@ -455,11 +421,97 @@ public class principal extends javax.swing.JFrame {
 
     //Limpio
     Colas colas = new Colas();
+    Thread cajero = new Cajero();
+
     int dato = 0;
     int max = 6;
 
     public static int generateNumber() {
         int randomInt = ThreadLocalRandom.current().nextInt(5, 15);
         return randomInt;
+    }
+
+    public void pintaFila() {
+        switch (colas.tamanio) {
+            case 0:
+                jPanel_pos_1.setBackground(Color.GRAY);
+                jPanel_pos_2.setBackground(Color.GRAY);
+                jPanel_pos_3.setBackground(Color.GRAY);
+                jPanel_pos_4.setBackground(Color.GRAY);
+                jPanel_pos_5.setBackground(Color.GRAY);
+                jPanel_pos_6.setBackground(Color.GRAY);
+            case 1:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GRAY);
+                jPanel_pos_3.setBackground(Color.GRAY);
+                jPanel_pos_4.setBackground(Color.GRAY);
+                jPanel_pos_5.setBackground(Color.GRAY);
+                jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 2:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GREEN);
+                jPanel_pos_3.setBackground(Color.GRAY);
+                jPanel_pos_4.setBackground(Color.GRAY);
+                jPanel_pos_5.setBackground(Color.GRAY);
+                jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 3:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GREEN);
+                jPanel_pos_3.setBackground(Color.GREEN);
+                jPanel_pos_4.setBackground(Color.GRAY);
+                jPanel_pos_5.setBackground(Color.GRAY);
+                jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 4:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GREEN);
+                jPanel_pos_3.setBackground(Color.GREEN);
+                jPanel_pos_4.setBackground(Color.GREEN);
+                jPanel_pos_5.setBackground(Color.GRAY);
+                jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 5:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GREEN);
+                jPanel_pos_3.setBackground(Color.GREEN);
+                jPanel_pos_4.setBackground(Color.GREEN);
+                jPanel_pos_5.setBackground(Color.GREEN);
+                jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 6:
+                jPanel_pos_1.setBackground(Color.GREEN);
+                jPanel_pos_2.setBackground(Color.GREEN);
+                jPanel_pos_3.setBackground(Color.GREEN);
+                jPanel_pos_4.setBackground(Color.GREEN);
+                jPanel_pos_5.setBackground(Color.GREEN);
+                jPanel_pos_6.setBackground(Color.GREEN);
+                break;
+
+            default:
+                System.out.println("No hay espacios disponibles");
+
+        }
+    }
+
+    public void atender() {
+        try {
+            if (colas.vacia()) {
+                System.out.println("No hay clientes en fila");
+                Jlabel_cajero_1.setBackground(Color.GREEN);
+            } else {
+                colas.extraer();
+                pintaFila();
+                Jlabel_cajero_1.setBackground(Color.RED);
+                Thread.sleep(10000);
+                Jlabel_cajero_1.setBackground(Color.GREEN);
+                if (!colas.vacia()) {
+                    atender();
+                }
+            }
+
+        } catch (Exception e) {
+        }
     }
 }
