@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class Colas {
@@ -54,10 +55,72 @@ public class Colas {
         }
     }
 
-    public int getInicio() {
+    public void pintarCola() {
 
-        return inicio.getDato();
+        switch (tamanio) {
+            
+                
+            case 1:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GRAY);
+                principal.jPanel_pos_3.setBackground(Color.GRAY);
+                principal.jPanel_pos_4.setBackground(Color.GRAY);
+                principal.jPanel_pos_5.setBackground(Color.GRAY);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 2:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GREEN);
+                principal.jPanel_pos_3.setBackground(Color.GRAY);
+                principal.jPanel_pos_4.setBackground(Color.GRAY);
+                principal.jPanel_pos_5.setBackground(Color.GRAY);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 3:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GREEN);
+                principal.jPanel_pos_3.setBackground(Color.GREEN);
+                principal.jPanel_pos_4.setBackground(Color.GRAY);
+                principal.jPanel_pos_5.setBackground(Color.GRAY);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 4:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GREEN);
+                principal.jPanel_pos_3.setBackground(Color.GREEN);
+                principal.jPanel_pos_4.setBackground(Color.GREEN);
+                principal.jPanel_pos_5.setBackground(Color.GRAY);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 5:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GREEN);
+                principal.jPanel_pos_3.setBackground(Color.GREEN);
+                principal.jPanel_pos_4.setBackground(Color.GREEN);
+                principal.jPanel_pos_5.setBackground(Color.GREEN);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
+                break;
+            case 6:
+                principal.jPanel_pos_1.setBackground(Color.GREEN);
+                principal.jPanel_pos_2.setBackground(Color.GREEN);
+                principal.jPanel_pos_3.setBackground(Color.GREEN);
+                principal.jPanel_pos_4.setBackground(Color.GREEN);
+                principal.jPanel_pos_5.setBackground(Color.GREEN);
+                principal.jPanel_pos_6.setBackground(Color.GREEN);
+                break;
+                
+            case 7:
+                System.out.println("No hay espacios disponibles");
+            default:
+                
+                principal.jPanel_pos_1.setBackground(Color.GRAY);
+                principal.jPanel_pos_2.setBackground(Color.GRAY);
+                principal.jPanel_pos_3.setBackground(Color.GRAY);
+                principal.jPanel_pos_4.setBackground(Color.GRAY);
+                principal.jPanel_pos_5.setBackground(Color.GRAY);
+                principal.jPanel_pos_6.setBackground(Color.GRAY);
 
+        }
     }
 
     public void imprimir() {
@@ -68,5 +131,12 @@ public class Colas {
             reco = reco.siguiente;
         }
         System.out.println();
+    }
+
+    public void pintarInfinito() {
+        do {
+            pintarCola();
+        } while (true);
+
     }
 }

@@ -1,3 +1,5 @@
 *.class
 /BuyGames/dist/
 /Proyecto/build/
+/ListasTipoCola/build/
+/ListasTipoCola/nbproject/private/

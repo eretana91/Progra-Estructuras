@@ -270,7 +270,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton EnterButton;
     private javax.swing.JButton ExitButton;
     public static javax.swing.JPasswordField JTextPassword;
-    public static javax.swing.JTextField JTextUsername;
+    private javax.swing.JTextField JTextUsername;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
